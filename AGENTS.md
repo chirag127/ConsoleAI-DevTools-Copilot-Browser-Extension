@@ -22,58 +22,55 @@
 ---
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** This repository, `Console-Whisperer-AI-DevTools-Copilot-Browser-Extension`, is a mission-critical, high-performance browser extension. Apply the **Apex Frontend Toolchain (Scenario A)**.
+**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `ConsoleAI-DevTools-Copilot-Browser-Extension`, is a browser extension leveraging JavaScript and AI.
 
-*   **PRIMARY SCENARIO: WEB / EXTENSION / GUI (TypeScript)**
-    *   **Core Stack:** **TypeScript 5.x/6.x** (Strict Mode, mandatory typing), **Vite 7** (for rapid compilation and HMR), and **React 19** (for UI composition). The extension is built using **WXT** or a similar manifest-v3 compliant framework for robust cross-browser compatibility.
-    *   **Architecture:** Adheres to **Feature-Sliced Design (FSD)** principles. Logic must be strictly segregated into `app`, `pages`, `widgets`, `features`, `entities`, and `shared`. State management must use a standard Signals approach (e.g., Zustand or equivalent).
-    *   **Styling:** Utilizes **Tailwind CSS v4** for utility-first styling, ensuring atomic design and minimizing bundle size for injection scripts.
-    *   **Linting & Formatting:** **Biome** is the sole source of truth for formatting and linting (`biome check --apply`).
-    *   **AI Integration:** Communication with the AI backend (external service) must be handled by a dedicated `services/ai` module, utilizing standardized request/response schemas (Zod enforced). All API keys must be handled securely via environment variables or a secrets manager.
+*   **PRIMARY SCENARIO A: WEB / APP / EXTENSION (JavaScript/TypeScript)**
+    *   **Stack:** This project leverages **JavaScript** (with potential for TypeScript adoption) for its browser extension core. The build process is managed by **Vite 7 (Rolldown)**, ensuring high performance. For native integration capabilities and desktop packaging, **Tauri v2.x** is the standard. State management follows **Signals (Standardized)** patterns. Extension development is standardized via **WXT (Web Extension Tooling)**.
+    *   **Linting & Formatting:** **Biome** is mandated for its unparalleled speed and comprehensive code quality checks.
+    *   **Testing:** **Vitest** for unit and integration testing, and **Playwright** for end-to-end (E2E) browser testing.
+    *   **Architecture:** Employs **Feature-Sliced Design (FSD)** for maintainable, scalable frontend architecture.
+    *   **AI Integration:** Leverages **OpenAI API** (or equivalent, e.g., Google Gemini) for AI-driven insights. Prioritize modular design, clear API contracts, and robust error handling for all AI model interactions.
 
-*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go) - *Not applicable.***
+*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go) - *Not applicable for this project. Reference only for potential backend services.***
+    *   **Stack:** Rust (Cargo) or Go (Modules).
+    *   **Lint:** Clippy / GolangCI-Lint.
+    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
 
-*   **SECONDARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable.***
-
----
-
-## 4. CODE QUALITY & VERIFICATION PROTOCOL
-**Objective:** Maintain P95 performance metrics and zero-defect deployment.
-
-### 4.1. ARCHITECTURAL PRINCIPLES
-1.  **SOLID:** Strict adherence to Single Responsibility (SR) and Dependency Inversion (DI).
-2.  **DRY/KISS:** Eliminate redundancy. Favor clarity and simplicity.
-3.  **YAGNI:** Build only what is required *now*. Architect for scalability, but implement functionality incrementally.
-4.  **Security Focus:** All content script injection methods must be sanitized. No `eval()` or `new Function()`. Secure communication between background/content/popup scripts.
-
-### 4.2. TESTING MANDATE
-*   **Unit Testing:** **Vitest** is mandatory for all core utility functions and React components (coverage target > 90%).
-    *   *Verification Command:* `npm run test:unit`
-*   **Integration Testing:** Critical flow tests (e.g., console interaction, API calls) must be covered.
-    *   *Verification Command:* `npm run test:integration`
-*   **E2E Testing:** **Playwright** is required for simulating user interaction within the DevTools panel and verifying correct AI response rendering.
-    *   *Verification Command:* `npm run test:e2e`
-
-### 4.3. COMMAND INVOCATION CHECKLIST
-The following commands MUST execute successfully prior to any pull request merge:
-
-| Command | Description | Tooling |
-| :--- | :--- | :--- |
-| `npm install` | Initializes project dependencies. | uv/npm |
-| `npm run build` | Creates production-ready artifact. | Vite |
-| `npm run lint` | Lints and enforces code standards. | Biome |
-| `npm run format` | Applies mandatory formatting rules. | Biome |
-| `npm run test:ci` | Executes all unit, integration, and coverage checks. | Vitest/Playwright |
+*   **TERTIARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable for this project. Reference only for potential data analysis or script backends.***
+    *   **Stack:** uv (Manager), Ruff (Linter), Pytest (Test).
+    *   **Architecture:** Modular Monolith or Microservices.
 
 ---
 
-## 5. REPOSITORY METADATA INTEGRITY
-**MANDATE:** This section defines the immutable repository identity. Any proposed changes must be run through a Level 4 Architecture Review Board (ARB).
+## 4. CODE VERIFICATION & VALIDATION (APEX STANDARD 5)
+*   **LINTING:** `biome check --apply src/
+`
+*   **TESTING (UNIT/INTEGRATION):** `vitest run --coverage
+`
+*   **TESTING (E2E):** `npx playwright test
+`
+*   **BUILD:** `npx vite build
+`
+*   **EXTENSION DEVELOPMENT BUILD:** `wxt build --type firefox
+` (or `chrome`, `edge` as applicable)
+*   **NATIVE PACKAGING (If Tauri):** `npx tauri build
+`
 
-| Attribute | Required Value | Rationale |
-| :--- | :--- | :--- |
-| **Name** | `Console-Whisperer-AI-DevTools-Copilot-Browser-Extension` | Defines Product, Function, Platform, and Type. High-velocity naming convention. |
-| **Description** | Intelligent AI copilot for browser DevTools. Get real-time error analysis, code optimization, and debugging insights directly in your console. Supercharge developer productivity with AI-powered assistance. | Concise, high-value proposition. |
-| **Primary Language** | TypeScript | Standard for high-quality, scalable front-end and extension development. |
-| **Default Branch** | `main` | Industry Standard. |
-| **Access URL** | `https://github.com/chirag127/Console-Whisperer-AI-DevTools-Copilot-Browser-Extension` | Canonical source location. |
+---
+
+## 5. REPOSITORY STANDARDS (APEX ARCHIVAL PROTOCOL)
+*   **GitHub User:** `chirag127`
+*   **Repository:** `ConsoleAI-DevTools-Copilot-Browser-Extension`
+*   **License:** `CC BY-NC 4.0`
+*   **Branching Strategy:** GitFlow (main, develop, feature/*, release/*, hotfix/*).
+
+---
+
+## 6. AI ASSISTANT GUIDELINES (THE "PRIME DIRECTIVE" ENFORCEMENT)
+*   **Goal Alignment:** All AI interactions must demonstrably contribute to the **`ConsoleAI-DevTools-Copilot-Browser-Extension`**'s core value proposition: "AI-powered copilot for browser developer tools, providing real-time error analysis, code optimization, and debugging insights to boost developer productivity."
+*   **Resource Management:** AI calls must be efficient. Implement caching, rate limiting, and prompt optimization to minimize latency and cost.
+*   **Contextual Awareness:** AI must operate solely within the scope of browser developer tools. It should not generate unrelated code, offer general programming advice, or attempt to debug non-browser-related issues.
+*   **Output Formatting:** AI-generated insights, explanations, and code suggestions must be clearly delineated and formatted for easy consumption within the browser dev tools interface.
+*   **Security & Privacy:** Never transmit sensitive user data (e.g., passwords, private keys, personal information) to AI models. Sanitize inputs and outputs rigorously.
+*   **Feedback Loop:** Integrate mechanisms for user feedback on AI suggestions to enable continuous improvement and model retraining.
+*   **Ethical Considerations:** Avoid generating biased, discriminatory, or harmful content. Ensure AI explanations are transparent and understandable.
