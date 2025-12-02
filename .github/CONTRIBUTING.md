@@ -1,75 +1,76 @@
-# Contributing to Console Whisperer
+# Contributing to ConsoleAI-DevTools-Copilot-Browser-Extension
 
-Thank you for your interest in contributing to Console Whisperer! We welcome contributions of all kinds, including code, documentation, bug reports, and feature requests. To ensure a smooth and collaborative experience, please review the following guidelines.
+Thank you for considering contributing to **ConsoleAI-DevTools-Copilot-Browser-Extension**! We welcome your ideas and contributions to make this AI-powered copilot for browser developer tools even better.
 
-## 1. Code of Conduct
+## 🚀 Our Philosophy
 
-We are committed to providing a welcoming and inclusive community. All contributors are expected to adhere to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+We adhere to the principles of **Zero-Defect, High-Velocity, Future-Proof** development. This means striving for robust, well-tested code that is easy to maintain and scalable.
 
-## 2. Getting Started
+## 🧭 Code of Conduct
 
-1.  **Fork the repository:** Click the "Fork" button on the top right of the repository page.
-2.  **Clone the repository:** `git clone <your-fork-url>`
-3.  **Create a branch:** `git checkout -b <your-branch-name>` (Use descriptive names like `fix-bug-x` or `feat-add-feature`) 
-4.  **Install dependencies:** Follow the installation instructions in the [README.md](README.md).
+This project is governed by the `[Contributor Covenant Code of Conduct](https://github.com/chirag127/ConsoleAI-DevTools-Copilot-Browser-Extension/blob/main/CODE_OF_CONDUCT.md)`. By participating, you are expected to uphold this code. Please report unacceptable behavior to `[email protected]`.
 
-## 3. Making Changes
+## 🛠️ Getting Started
 
-1.  **Make your changes:**  Write your code, add tests, and update documentation as necessary.
-2.  **Commit your changes:** Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit messages.
-    *   `feat`:  A new feature
-    *   `fix`:  A bug fix
-    *   `docs`: Documentation changes
-    *   `style`:  Code formatting, etc. (no functional changes)
-    *   `refactor`:  Code changes that improve structure but don't change behavior
-    *   `perf`:  Performance improvements
-    *   `test`:  Adding or modifying tests
-    *   `chore`:  Build process or auxiliary tool changes
-3.  **Run tests:** Ensure all tests pass before submitting a pull request.  Use `npm run test` or the appropriate command for the project's testing framework.
-4.  **Lint your code:**  Ensure your code adheres to our linting rules.  Use `npm run lint` or the appropriate command.
-5.  **Format your code:** Ensure your code is formatted correctly. This project uses Biome for formatting.
+Before you contribute, please ensure your development environment is set up according to our standards.
 
-## 4. Submitting a Pull Request
+1.  **Clone the repository:**
+    bash
+    git clone https://github.com/chirag127/ConsoleAI-DevTools-Copilot-Browser-Extension.git
+    cd ConsoleAI-DevTools-Copilot-Browser-Extension
+    
 
-1.  **Push your changes:** `git push origin <your-branch-name>`
-2.  **Create a pull request:** Go to the original repository and click "Compare & pull request."  Provide a clear and concise description of your changes.
-3.  **Review:**  Be prepared to address any feedback or suggestions from the maintainers.
+2.  **Install Dependencies:**
+    As this project is JavaScript-based and targets browser extensions, we use `npm` and specific tools. Follow the setup instructions in the `README.md`.
 
-## 5. Branching Model
+    bash
+    npm install
+    
 
-We use a branching model that is designed to be simple and effective:
+3.  **Run Tests:**
+    Verify that your environment is set up correctly by running the test suite.
 
-*   `main`: The main branch represents the current stable release. Pull requests should be merged into this branch.
-*   `develop`: The develop branch represents the in-development state. Feature branches should be based off of and merged into develop branch.
+    bash
+    npm test
+    
 
-## 6. Project Structure
+## 💡 Contribution Workflow
 
-Refer to the [README.md](README.md) for details about the project's architecture and file structure.
+We follow a standard GitHub pull request workflow:
 
-## 7. Reporting Bugs
+1.  **Fork the repository:** Create your own fork of the `chirag127/ConsoleAI-DevTools-Copilot-Browser-Extension` repository.
+2.  **Create a branch:** Make your changes in a new branch. Give it a descriptive name (e.g., `feature/add-new-optimization-rule`, `fix/incorrect-error-parsing`).
+    bash
+    git checkout -b your-branch-name
+    
+3.  **Make your changes:** Write clean, well-commented code. Follow the established coding style and architectural patterns.
+4.  **Test your changes:** Ensure your changes are covered by tests. Run the full test suite (`npm test`) to confirm everything works as expected.
+5.  **Commit your changes:** Use conventional commits for clear and semantic commit messages.
+    bash
+    git add .
+    git commit -m "feat: Add real-time suggestion for CSS optimization"
+    
+6.  **Push to the branch:**
+    bash
+    git push origin your-branch-name
+    
+7.  **Open a Pull Request (PR):** Submit a pull request to the `main` branch of the `chirag127/ConsoleAI-DevTools-Copilot-Browser-Extension` repository.
 
-If you find a bug, please [open an issue](.github/ISSUE_TEMPLATE/bug_report.md) and provide as much detail as possible, including:
+## 📝 Pull Request Guidelines
 
-*   A clear and concise description of the bug.
-*   Steps to reproduce the bug.
-*   Expected behavior.
-*   Actual behavior.
-*   Your environment (browser, operating system, etc.).
+*   **Clear Title and Description:** Explain the purpose of your PR and the problem it solves.
+*   **Link to Issues:** If your PR addresses an issue, please link to it in the description (e.g., `Closes #123`).
+*   **Code Review:** Be prepared to respond to feedback from the maintainers.
+*   **Passing CI:** Ensure all CI checks pass before your PR is merged.
 
-## 8. Feature Requests
+## 📜 Code Standards & AI Directives
 
-If you have a feature request, please [open an issue](.github/ISSUE_TEMPLATE/feature_request.md) and provide a clear and concise description of the feature, including:
+*   **Linting & Formatting:** We use **Biome** for ultra-fast linting and formatting. Ensure your code adheres to the rules defined in `.biome.json`.
+*   **Testing:** We use **Vitest** for unit and integration testing. Aim for comprehensive test coverage.
+*   **AI Agent Directives:** Adhere to the principles outlined in the `AGENTS.md` file. Future AI agents should be able to understand and work with your contributions.
 
-*   A clear and concise description of the feature.
-*   Why the feature is useful.
-*   Potential implementation details (optional).
+## 🤝 Seeking Help
 
-## 9. Security
+If you have any questions or need clarification on the contribution process, please open an issue on the repository.
 
-If you discover a security vulnerability, please refer to our [Security Policy](.github/SECURITY.md).
-
-## 10. Contact
-
-For any questions or concerns, please contact us via GitHub issues.
-
----
+We appreciate your efforts to improve **ConsoleAI-DevTools-Copilot-Browser-Extension**!
