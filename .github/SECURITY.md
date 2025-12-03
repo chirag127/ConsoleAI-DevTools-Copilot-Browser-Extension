@@ -1,39 +1,45 @@
-# Security Policy
+# Security Policy for ConsoleAI-DevTools-Copilot-Browser-Extension
 
-## Supported Versions
+## 1. Reporting a Vulnerability
 
-We are committed to maintaining a secure development environment. The following versions are actively maintained and receive regular security updates:
+We take the security of ConsoleAI-DevTools-Copilot-Browser-Extension very seriously. If you discover a security vulnerability, we would like to be informed as soon as possible so that we can address it.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | :white_check_mark: |
+Please report any security vulnerabilities to us promptly through one of the following channels:
 
-Security vulnerabilities in `ConsoleAI-DevTools-Copilot-Browser-Extension` should be reported according to the instructions below to ensure prompt attention and remediation.
+*   **GitHub Security Advisories:** Create a private security report at [https://github.com/chirag127/ConsoleAI-DevTools-Copilot-Browser-Extension/security/advisories/new](https://github.com/chirag127/ConsoleAI-DevTools-Copilot-Browser-Extension/security/advisories/new).
+*   **Email:** Send an encrypted email to `chirag127.dev@gmail.com`.
 
-## Reporting a Vulnerability
+We request that you provide as much information as possible, including:
 
-We appreciate your efforts to responsibly disclose security vulnerabilities. Please follow these steps:
+*   A clear description of the vulnerability.
+*   Steps to reproduce the vulnerability.
+*   Your environment (e.g., browser version, operating system, extension version if applicable).
+*   Any proof-of-concept code or screenshots.
 
-1.  **Do NOT** file a public issue or pull request for security vulnerabilities.
-2.  Send a detailed email to our dedicated security team at: `security@example.com` (Please replace with a real security contact email if available).
-3.  In your email, please include:
-    *   A clear description of the vulnerability.
-    *   Steps to reproduce the vulnerability.
-    *   The affected version(s) of the software.
-    *   Any relevant system information or environment details.
-    *   (Optional) A proof-of-concept exploit.
-4.  We will acknowledge receipt of your vulnerability report within **48 hours**.
-5.  We will investigate and, if necessary, release a fix as quickly as possible. We will also provide updates on the progress of the fix.
-6.  We may choose to publicly disclose the vulnerability once a fix is available, crediting the reporter.
+## 2. Vulnerability Handling
 
-## Security Best Practices
+We will acknowledge receipt of your security report within **24 hours** and will endeavor to respond within **3 business days**. We will keep you informed of the progress of our investigation and remediation efforts.
 
-As a browser extension and developer tool, security is paramount. We aim to adhere to the following best practices:
+*   **Triage:** We will triage reported vulnerabilities based on their severity and potential impact.
+*   **Remediation:** Once a vulnerability is confirmed, we will work to develop and release a fix as quickly as possible.
+*   **Disclosure:** We will follow responsible disclosure practices. After a fix has been released, we may publicly disclose the vulnerability details once we are confident that the risk to users has been mitigated.
 
-*   **Principle of Least Privilege:** The extension only requests the permissions it absolutely needs to function.
-*   **Input Validation:** All external inputs are validated to prevent injection attacks.
-*   **Secure Data Handling:** Sensitive data, if any, is handled with encryption and stored securely.
-*   **Dependency Management:** We regularly audit and update our dependencies using `uv` and `Ruff` to incorporate the latest security patches.
-*   **Code Audits:** Regular code reviews and automated security checks are part of our development lifecycle.
+## 3. Supported Versions
 
-Thank you for helping us keep `ConsoleAI-DevTools-Copilot-Browser-Extension` secure!
+As ConsoleAI-DevTools-Copilot-Browser-Extension is a browser extension, we are primarily concerned with the latest stable version available through the official browser web stores. We will prioritize security fixes for the **most recent stable release**. Older versions may not be actively maintained or patched.
+
+## 4. Development Practices for Security
+
+We are committed to developing ConsoleAI-DevTools-Copilot-Browser-Extension with security in mind. This includes:
+
+*   **Dependency Management:** Regularly scanning and updating dependencies using `uv` and `Ruff` to address known vulnerabilities.
+*   **Linting & Formatting:** Employing `Ruff` for strict code quality and security checks.
+*   **Testing:** Utilizing `Pytest` to ensure code integrity and prevent regressions.
+*   **Browser Extension Security Best Practices:** Adhering to guidelines for secure browser extension development, including minimizing permissions, sanitizing inputs, and avoiding sensitive data exposure.
+*   **AI Integration Security:** When interacting with AI models, we ensure proper input sanitization and output validation to prevent prompt injection and other AI-specific security risks.
+
+## 5. Safe Harbor Statement
+
+We will not pursue legal action against individuals who discover and report security vulnerabilities in good faith, provided they adhere to this security policy and do not engage in activities that disrupt the project or its users.
+
+*Last Updated: December 2025*
